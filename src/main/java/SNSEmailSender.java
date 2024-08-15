@@ -9,8 +9,8 @@ public class SNSEmailSender {
     public static final String AWS_SECRET_KEY = "aws.secretKey";
 
     static {
-        System.setProperty(AWS_ACCESS_KEY_ID, {AWS access key id});
-        System.setProperty(AWS_SECRET_KEY, {AWS secret key});
+        System.setProperty(AWS_ACCESS_KEY_ID, {aws_access_key_id});
+        System.setProperty(AWS_SECRET_KEY, {aws_secret_key});
     }
 
     public static void main(String[] args) {
@@ -19,10 +19,10 @@ public class SNSEmailSender {
         AmazonSNS snsClient = AmazonSNSClient.builder().withRegion(Regions.AP_SOUTH_1).build();
 
         // Set the parameters for the email notification
-        String subject = {message subject};
-        String message = {message text};
+        String subject = {message_subject};
+        String message = {message_text};
 
-        PublishRequest publishRequest = new PublishRequest({topic Arn}, message, subject);
+        PublishRequest publishRequest = new PublishRequest({topic_arn}, message, subject);
 
         // Send the email notification
         snsClient.publish(publishRequest);

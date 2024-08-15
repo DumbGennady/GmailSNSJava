@@ -14,13 +14,13 @@ public class SNSSMSSender {
     public static final String AWS_SECRET_KEY = "aws.secretKey";
 
     static {
-        System.setProperty(AWS_ACCESS_KEY_ID, {AWS access key id});
-        System.setProperty(AWS_SECRET_KEY, {AWS secret key});
+        System.setProperty(AWS_ACCESS_KEY_ID, {aws_access_key_id});
+        System.setProperty(AWS_SECRET_KEY, {aws_secret_key});
     }
 
     public static void main(String[] args) {
-        SMSSender myClient = new SMSSender();
-        myClient.sendSingleSMS({message Body}, {destination phone no.});
+        SNSSMSSender snsSmsSender = new SNSSMSSender();
+        snsSmsSender.sendSingleSMS({message_body}, {destination_phone_number});
     }
 
     public void sendSingleSMS(String message, String phoneNumber) {

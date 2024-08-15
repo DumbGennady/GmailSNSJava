@@ -6,9 +6,9 @@ import java.util.Properties;
 public class GmailSender {
     public static void main(String[] args){
 
-        String to = {destination email};
-        String from = {sender email};
-        String password = {16 digit auth key};
+        String to = {destination_email};
+        String from = {sender_email};
+        String password = {16_digit_auth_key};
 
         Properties properties = System.getProperties();
 
@@ -29,10 +29,10 @@ public class GmailSender {
             message.setFrom(new InternetAddress(from));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
 
-            message.setSubject({mail subject});
+            message.setSubject({mail_subject});
 
             // For text-only messages
-            message.setText({Text body});
+            message.setText({text_body});
 
 
             System.out.println("Sending.....");
