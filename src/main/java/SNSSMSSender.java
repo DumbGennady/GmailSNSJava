@@ -9,7 +9,7 @@ import com.amazonaws.services.sns.model.PublishRequest;
 import com.amazonaws.services.sns.model.PublishResult;
 
 
-public class SMSSender {
+public class SNSSMSSender {
     public static final String AWS_ACCESS_KEY_ID = "aws.accessKeyId";
     public static final String AWS_SECRET_KEY = "aws.secretKey";
 

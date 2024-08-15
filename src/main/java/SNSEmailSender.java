@@ -3,7 +3,7 @@ import com.amazonaws.services.sns.AmazonSNS;
 import com.amazonaws.services.sns.AmazonSNSClient;
 import com.amazonaws.services.sns.model.PublishRequest;
 
-public class EmailSender {
+public class SNSEmailSender {
 
     public static final String AWS_ACCESS_KEY_ID = "aws.accessKeyId";
     public static final String AWS_SECRET_KEY = "aws.secretKey";
